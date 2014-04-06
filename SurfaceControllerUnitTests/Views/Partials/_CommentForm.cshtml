@@ -1,0 +1,7 @@
+﻿@model SurfaceControllerUnitTests.Models.CommentViewModel
+
+@using (Html.BeginUmbracoForm("CreateComment", "BlogPostSurface"))
+{
+    @Html.EditorFor(x => Model)
+    <input type="submit" />
+}

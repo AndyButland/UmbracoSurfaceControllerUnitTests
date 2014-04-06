@@ -1,0 +1,12 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = null;
+}
+<h1>Home</h1>
+
+@if (TempData["CustomMessage"] != null)
+{
+    <p>@TempData["CustomMessage"].ToString()</p>
+}
+
+@Html.Partial("_CommentForm", new SurfaceControllerUnitTests.Models.CommentViewModel())
